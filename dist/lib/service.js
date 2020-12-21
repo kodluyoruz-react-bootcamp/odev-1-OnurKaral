@@ -5,10 +5,12 @@ async function getData(Number) {
     console.log(users);
     const { data: posts } = await _axios2.default.get(`${ENDPOINT}/posts?userId=${Number}`);
     console.log(posts);
+    
     return `${users}${posts}`
-
 }
-module.exports={
+
+module.exports = {
     getData
 };
+
 //getData(1);
