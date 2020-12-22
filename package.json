@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "nodemon dist/app.js",
     "dev": "nodemon src/app.js",
     "dev2": "nodemon src/lib/service.js",
     "build": "sucrase ./src -d ./dist --transforms imports"

@@ -1,16 +1,14 @@
 import axios from "axios";
 const ENDPOINT = "https://jsonplaceholder.typicode.com";
 async function getData(Number) {
+    //Number = userid
     const { data: users } = await axios.get(`${ENDPOINT}/users/${Number}`);
-    console.log(users);
+    //console.log(users);
     const { data: posts } = await axios.get(`${ENDPOINT}/posts?userId=${Number}`);
-    console.log(posts);
+    //console.log(posts);
     
-    return `${users}${posts}`
+    return(console.log({users,posts}));
 }
 
-module.exports = {
-    getData
-};
-
+export default getData;
 //getData(1);
